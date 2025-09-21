@@ -2,7 +2,7 @@ import React, { useState, useCallback } from 'react';
 import { ReportGenerator } from './components/ControlPanel_temp';
 import { ReportDisplay } from './components/SystemDashboard_temp';
 import { generateFinancialReport } from './services/geminiService';
-import { SAMPLE_DATA } from './constants';
+import { SAMPLE_DATA } from './myconstants';
 
 const App: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false);

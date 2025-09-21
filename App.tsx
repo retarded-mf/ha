@@ -31,12 +31,16 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Agentic Financial Analyst</h1>
-      <ReportGenerator onGenerate={handleGenerateReport} sampleData={SAMPLE_DATA} />
-      {isLoading && <div>Loading...</div>}
-      {error && <div style={{ color: 'red' }}>{error}</div>}
-      <ReportDisplay report={report} />
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white py-10 px-4">
+      <h1 className="text-4xl font-extrabold mb-8 text-center text-purple-300 drop-shadow">
+        Agentic Financial Analyst
+      </h1>
+      <div className="max-w-4xl mx-auto space-y-8">
+        <ReportGenerator onGenerate={handleGenerateReport} sampleData={SAMPLE_DATA} />
+        {isLoading && <div className="text-cyan-300 text-center animate-pulse">Loading...</div>}
+        {error && <div className="text-red-400 text-center">{error}</div>}
+        <ReportDisplay report={report} />
+      </div>
     </div>
   );
 };
